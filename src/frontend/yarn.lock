@@ -2727,6 +2727,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ts-stack/markdown@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@ts-stack/markdown@npm:1.4.0"
+  dependencies:
+    tslib: ^2.0.0
+  checksum: 2e62d5f99e2236305f1d0b58390757343534fa863c66a698370d9984949e72f4c82d4cf411cc149baaec8c1bba97947a8cb1c50a84f7c2e5626f6c43d01a5c59
+  languageName: node
+  linkType: hard
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.9
   resolution: "@tsconfig/node10@npm:1.0.9"
@@ -2911,6 +2920,15 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: c3070ccdc9ca0f40df747bced1c96c71a61992d6f7c767e8fd24bb6a3c2de26e8b84135ede000b7e79db530a23e7e88dcd9db60eee6395d0f4ce1dae91369dd4
+  languageName: node
+  linkType: hard
+
+"@types/highlight.js@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "@types/highlight.js@npm:10.1.0"
+  dependencies:
+    highlight.js: "*"
+  checksum: 284f47e89bfe300f307ad76523a257ff12ed7cf0318cdc0a7fe6965a1d7e21840d133cfc623ec705495550d37341c278c2c9641bafce8b8dbb4bea4acd46f0ec
   languageName: node
   linkType: hard
 
@@ -6677,11 +6695,14 @@ __metadata:
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
+    "@ts-stack/markdown": ^1.4.0
+    "@types/highlight.js": ^10.1.0
     "@types/jest": ^27.0.1
     "@types/node": ^16.7.13
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     antd: ^5.2.3
+    highlight.js: ^11.7.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.9.0
@@ -7086,6 +7107,13 @@ __metadata:
   bin:
     he: bin/he
   checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:*, highlight.js@npm:^11.7.0":
+  version: 11.7.0
+  resolution: "highlight.js@npm:11.7.0"
+  checksum: 19e3fb8b56f4b361b057a8523b989dfeb6479bbd1e29cec3fac6fa5c78d09927d5fa61b7dba6631fdb57cfdca9b3084aa4da49405ceaf4a67f67beae2ed5b77d
   languageName: node
   linkType: hard
 
@@ -13184,7 +13212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
