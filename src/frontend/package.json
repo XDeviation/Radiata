@@ -15,8 +15,11 @@
     "@types/react-dom": "^18.0.0",
     "antd": "^5.2.3",
     "highlight.js": "^11.7.0",
+    "monaco-editor": "^0.36.1",
     "react": "^18.2.0",
+    "react-codemirror2": "^7.2.1",
     "react-dom": "^18.2.0",
+    "react-monaco-editor": "^0.52.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
@@ -46,5 +49,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:8000"
+  "proxy": "http://127.0.0.1:8000",
+  "devDependencies": {
+    "monaco-editor-webpack-plugin": "^7.0.1"
+  }
 }
