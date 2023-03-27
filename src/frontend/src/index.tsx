@@ -6,7 +6,9 @@ import Root from "./pages/root";
 import ErrorPage from "./pages/error-page";
 import Login from "./pages/login";
 import About from "./pages/about";
+import Sandbox from "./pages/sandbox";
 import Problem from "./pages/problem";
+import ProblemList from "./pages/problemList";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,8 +27,16 @@ const router = createBrowserRouter([
             element: <Login />,
           },
           {
-            path: "problem",
+            path: "problems",
+            element: <ProblemList />,
+          },
+          {
+            path: "problem/:id",
             element: <Problem />,
+          },
+          {
+            path: "sandbox",
+            element: <Sandbox />,
           },
         ],
       },

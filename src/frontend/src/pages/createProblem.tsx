@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Marked, Renderer } from "@ts-stack/markdown";
 import { Col, Steps, Row, Tag, Tabs, Select, Button } from "antd";
 import type { TabsProps } from "antd";
 import { judge, JudgeRequest, JudgeResponse, JudgeResult } from "../api/judge";
 import MonacoEditor from "react-monaco-editor";
-import { useParams } from "react-router-dom";
-import ErrorPage from "./error-page";
-
 Marked.setOptions({
   renderer: new Renderer(),
   gfm: true,
@@ -53,17 +50,7 @@ const Problem: React.FC = () => {
   const [judgeResult, setJudgeResult] = useState<string>("Accept");
   const [timeLimit, setTimeLimit] = useState<number>(1000);
   const [memoryLimit, setMemoryLimit] = useState<number>(1024 * 1024 * 128);
-  const [problemId, setProblemId] = useState<number>();
-  const { id } = useParams<"id">();
-
-  const getProblemId = () => {
-    if (!id) return;
-    setProblemId(parseInt(id));
-  };
-
-  useEffect(() => {
-    getProblemId();
-  });
+  const [problemId, setProblemId] = useState<number>(1001);
 
   const md =
     "## I am using __markdown__.\n## Test problem\nthis is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong string";
@@ -105,7 +92,6 @@ const Problem: React.FC = () => {
   };
 
   async function onSubmit() {
-    if (!problemId) return;
     const params: JudgeRequest = {
       src,
       language,
@@ -139,7 +125,6 @@ const Problem: React.FC = () => {
       acceptedSubmit();
     });
   }
-
   const items: TabsProps["items"] = [
     {
       key: "1",
@@ -213,7 +198,7 @@ const Problem: React.FC = () => {
     },
   ];
 
-  return { problemId } ? (
+  return (
     <Row gutter={[16, 24]}>
       <Col className="gutter-row" span={18}>
         <div style={style}>
@@ -265,8 +250,6 @@ const Problem: React.FC = () => {
         </div>
       </Col>
     </Row>
-  ) : (
-    <ErrorPage />
   );
 };
 

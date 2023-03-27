@@ -15,19 +15,19 @@ import { Routes, Route, Outlet, Link, Router } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items: MenuProps["items"] = [
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  AppstoreOutlined,
-  TeamOutlined,
-  ShopOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: React.createElement(icon),
-  label: <Link to="/about">About</Link>,
-}));
+  {
+    key: "1",
+    label: <Link to="/about">About</Link>,
+  },
+  {
+    key: "2",
+    label: <Link to="/problems">Problem</Link>,
+  },
+  {
+    key: "3",
+    label: <Link to="/sandbox">Sandbox</Link>,
+  },
+];
 
 const Root: React.FC = () => {
   const {

@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import auth, heartbeat, judge
+from backend.routers import auth, heartbeat, judge, sandbox, problem
 
 app = FastAPI()
 
@@ -19,6 +19,8 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(heartbeat.router)
 app.include_router(judge.router)
+app.include_router(sandbox.router)
+app.include_router(problem.router)
 
 
 def main():

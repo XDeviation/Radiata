@@ -30,6 +30,5 @@ export async function getGithubUserName(code = "") {
       "Content-Type": "application/json",
     },
   });
-  console.log(user_info.json());
   return user_info;
 }
