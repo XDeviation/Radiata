@@ -20,7 +20,7 @@ services:
       - ./data/judge_server/run:/judger
     environment:
       - SERVICE_URL=http://127.0.0.1:8080
-      - BACKEND_URL=http://172.21.40.11:8000/api/v1/judger_heartbeat
+      - BACKEND_URL=http://172.24.51.230:8000/api/v1/judger_heartbeat
       - TOKEN=abcdefx2
     ports:
       - "0.0.0.0:8080:8080"

@@ -9,6 +9,7 @@ import About from "./pages/about";
 import Sandbox from "./pages/sandbox";
 import Problem from "./pages/problem";
 import ProblemList from "./pages/problemList";
+import Upload from "./pages/upload";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
           {
             path: "sandbox",
             element: <Sandbox />,
+          },
+          {
+            path: "upload",
+            element: <Upload />,
           },
         ],
       },

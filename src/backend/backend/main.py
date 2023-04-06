@@ -2,7 +2,7 @@ import uvicorn
 import multiprocessing
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import auth, heartbeat, judge, sandbox, problem
+from backend.routers import auth, heartbeat, judge, sandbox, problem, upload
 
 app = FastAPI()
 
@@ -22,6 +22,7 @@ app.include_router(heartbeat.router)
 app.include_router(judge.router)
 app.include_router(sandbox.router)
 app.include_router(problem.router)
+app.include_router(upload.router)
 
 
 def main():
